@@ -8,36 +8,36 @@ Both lights alternate blinking off and on for 650 ms each. (They continue this f
 This video illustrated what we are going for: https://www.youtube.com/watch?v=1TTnCqdSPqc
 */
 
-void setup()
-{
-    // set up output pins
-    pinMode( , OUTPUT);
-    pinMode(8, );
-    
-    // blink green LED on and off twice
-        digitalWrite(, HIGH);
-        delay();
-        digitalWrite(, LOW);
-        delay();
-    
-    // wait one second
-    delay ();
-    
-    // blink blue LED on and off twice
-        digitalWrite(, HIGH);
-        delay();
-        digitalWrite(, LOW);
-        delay(); 
-    
-    // wait three seconds
-    delay ();
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(7,OUTPUT); //blue
+  pinMode(8,OUTPUT); //green
+  digitalWrite(8, HIGH); //on
+  delay(200);
+  digitalWrite(8,LOW); //off
+  delay(200);
+  digitalWrite(8, HIGH); //on
+  delay(200);
+  digitalWrite(8,LOW); //off
+  delay(1000);
+  digitalWrite(7,HIGH); //on
+  delay(200);
+  digitalWrite(7,LOW); //off
+  delay(200);
+  digitalWrite(7,HIGH); //on
+  delay(200);
+  digitalWrite(7,LOW); //off
+  delay(3000);
 }
 
-void loop()
-{
-    // blink both LEDs on and off alternatively
-
-    delay(650);
-
-    delay(650);
+void loop() {
+  // put your main code here, to run repeatedly:
+  digitalWrite(8, HIGH); //on
+  delay(650);
+  digitalWrite(8,LOW); //off
+  delay(650);
+  digitalWrite(7, HIGH); //on
+  delay(650);
+  digitalWrite(7,LOW); //off
+  delay(650);
 }
